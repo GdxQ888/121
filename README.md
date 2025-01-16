@@ -95,11 +95,11 @@
 
 ## 3、评测指标
 
-中文电子病历ICD诊断编码任务采用正确率（Acc）作为评测指标，计算公式如下：
+中文电子病历ICD诊断编码任务采用正确率（Acc）作为评测指标，计算公式如下： 
 
-![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20Acc%20=%20\frac{1}{N}\sum_{i=1}^N\{0.5\cdot%20I(\hat{y}_{main}%20==%20y_{main})%20+%200.5\cdot%20\frac{NUM(y_{other}%20\cap%20\hat{y}_{other})}{NUM(y_{other})}\}_i)
+![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20Acc%20=%20\frac{1}{N}\sum_{i=1}^N\left\{0.5\cdot%20I(\hat{y}_{main}%20==%20y_{main})%20+%200.5\cdot%20\frac{NUM(y_{other}%20\cap%20\hat{y}*_**{other})}{NUM(y**_*{other})}\right\}_i) 
 
-其中，![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20I(\cdot))为指示函数，满足条件返回1，否则返回0；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20\hat{y}_{main})和![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20y_{main})分别表示主诊断编码的预测标签和真实标签；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20NUM(x))代表数量函数，用来计算x的数量，![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20\hat{y}_{other})和![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20y_{other})分别表示其他诊断编码的预测标签集和真实标签集；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20N)为测试样本的数量；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20\{\cdot\}_i)为第i个中文电子病历的预测准确率。
+其中，![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20I(\cdot))为指示函数，满足条件返回1，否则返回0；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20\hat{y}_{main})和![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20y_{main})分别表示主诊断编码的预测标签和真实标签；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20NUM(x))代表数量函数，用来计算x的数量，![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20\hat{y}_{other})和![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20y_{other})分别表示其他诊断编码的预测标签集和真实标签集；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20N)为测试样本的数量；![equation](https://latex.codecogs.com/png.latex?\dpi{150}%20\small%20\left\{\cdot\right\}_i)为第i个中文电子病历的预测准确率。
 
 ## 4、任务奖项
 
