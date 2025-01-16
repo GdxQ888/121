@@ -97,11 +97,9 @@
 
 中文电子病历ICD诊断编码任务采用正确率（Acc）作为评测指标，计算公式如下：
 
-![equation](https://latex.codecogs.com/svg.latex?\Large%20Acc%20=%20\frac{1}{N}\sum_{i=1}^N\{0.5\cdot%20I(\hat{y}_{main}%20==%20y_{main})%20+%200.5\cdot%20\frac{NUM(y_{other}%20\cap%20\hat{y}_{other})}{NUM(y_{other})}\}_i)
-$$
-\mathrm{Acc}=\frac{1}{N}\sum_{i=1}^N\{0.5\cdot\mathrm{I}(\hat{\mathrm{y}}_{\mathrm{main}}==\mathrm{y}_{\mathrm{main}})+0.5\cdot\frac{\mathrm{NUM}(\mathrm{y}_{\mathrm{other}}\cap\hat{\mathrm{y}}_{\mathrm{other}})}{\mathrm{NUM}(\mathrm{y}_{\mathrm{other}})}\}_i
-$$
-其中，$$I(\cdot)$$为指示函数，满足条件返回1，否则返回0，$$\hat{\mathrm{y}}_{\mathrm{main}}$$和$$\mathrm{y}_{\mathrm{main}}$$分别表示主诊断编码的预测标签和真实标签；$$NUM(x)$$代表数量函数，用来计算$$x$$的数量，$$\hat{\mathrm{y}}_{\mathrm{other}}$$和$$\mathrm{y}_{\mathrm{other}}$$分别表示其他诊断编码的预测标签集和真实标签集；$$N$$为测试样本的数量；$${\{\cdot}\}_{i}$$为第$$i$$个中文电子病历的预测准确率。
+![equation](https://latex.codecogs.com/svg.latex?Acc%20=%20\frac{1}{N}\sum_{i=1}^N\{0.5\cdot%20I(\hat{y}_{main}%20==%20y_{main})%20+%200.5\cdot%20\frac{NUM(y_{other}%20\cap%20\hat{y}_{other})}{NUM(y_{other})}\}_i)
+
+其中，![equation](https://latex.codecogs.com/svg.latex?I(\cdot))为指示函数，满足条件返回1，否则返回0；![equation](https://latex.codecogs.com/svg.latex?\hat{y}_{main})和![equation](https://latex.codecogs.com/svg.latex?y_{main})分别表示主诊断编码的预测标签和真实标签；![equation](https://latex.codecogs.com/svg.latex?NUM(x))代表数量函数，用来计算x的数量；![equation](https://latex.codecogs.com/svg.latex?\hat{y}_{other})和![equation](https://latex.codecogs.com/svg.latex?y_{other})分别表示其他诊断编码的预测标签集和真实标签集；![equation](https://latex.codecogs.com/svg.latex?N)为测试样本的数量；![equation](https://latex.codecogs.com/svg.latex?\{\cdot\}_i)为第i个中文电子病历的预测准确率。
 
 
 # 三、结果提交
